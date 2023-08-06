@@ -97,7 +97,7 @@
     const scrollPx = document.body.parentNode.scrollTop;
     const windowHeight = window.innerHeight;
     let vhDown = scrollPx / windowHeight;
-    if (vhDown > 0.9 && fullRocket == false) {
+    if (vhDown > 1 && fullRocket == false) {
       toggleFullRocket();
     } else if (vhDown < 1 && fullRocket == true) {
       toggleFullRocket();
