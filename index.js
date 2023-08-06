@@ -22,10 +22,7 @@
    */
 
   async function initSlideshow() {
-    let images = await fetch(URL + '/slideshowAssets');
-    images = await statusCheck(images);
-    images = await images.json();
-    images = images.slideshowImg;
+    let images = ['hotfire-1.jpg', 'hotfire-2.JPG', 'machining-1.jpg', 'tech-1.JPG'];
     let parent = qs('#slideshow div');
     appendImages(parent, images, 'ssUpper');
     appendImages(parent, images, 'ssLower');
@@ -105,7 +102,6 @@
     } else if (vhDown < 1 && fullRocket == true) {
       toggleFullRocket();
     }
-    console.log(isInViewport(qs('#rockets h2')));
   }
 
   function isInViewport(element) {
